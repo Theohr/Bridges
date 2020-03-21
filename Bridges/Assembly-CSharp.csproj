@@ -53,7 +53,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ChangeToMedium.cs" />
      <Compile Include="Assets\Scripts\DrawingBridges.cs" />
+     <Compile Include="Assets\Scripts\DrawingBridges2ndTry.cs" />
+     <Compile Include="Assets\Scripts\RestartPuzzle.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>D:/Bridges/Bridges/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>

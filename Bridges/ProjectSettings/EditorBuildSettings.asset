@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/EasyMode.unity
+    guid: 43a3678e34619a34992bdcce79953570
+  - enabled: 1
+    path: Assets/Scenes/MediumMode.unity
+    guid: b0e66036364ff0a4ca73d83b564a95cd
   m_configObjects: {}
