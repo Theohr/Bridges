@@ -2168,7 +2168,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1823755940}
-        m_MethodName: ChangeToMediumDiff
+        m_MethodName: ChangeToMainScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2222,7 +2222,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1823755935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd34aecb42edc944bdb78d4c3b67c66, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a95514a0f546e145aba38d2dd400b93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1853920372
