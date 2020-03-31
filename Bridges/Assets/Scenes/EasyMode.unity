@@ -337,7 +337,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 252, y: -5.2}
+  m_AnchoredPosition: {x: 246, y: -6}
   m_SizeDelta: {x: 160, y: 34.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &204731486
@@ -491,7 +491,6 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
-  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -516,9 +515,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a75a57d6ccad36d44884e665cdebbb4f, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e40d2be4dd723849b9ba7f65e1bf612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  islandOne: {fileID: 133098276}
+  islandTwo: {fileID: 1920047371}
+  islandThree: {fileID: 1303061461}
+  islandFour: {fileID: 1530511983}
+  islandFive: {fileID: 737667631}
+  islandSix: {fileID: 1853920372}
   material: {fileID: 0}
 --- !u!20 &519420031
 Camera:
@@ -576,21 +581,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &519420033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1e7c8633cac3b54b900f48d245c6fab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeStart: 0
-  textBox: {fileID: 1658030406}
-  speed: 1
 --- !u!1 &683520065
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,7 +732,7 @@ GameObject:
   - component: {fileID: 737667633}
   - component: {fileID: 737667632}
   m_Layer: 0
-  m_Name: Island 3
+  m_Name: Island 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -855,7 +845,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 73.7, y: -133}
+  m_AnchoredPosition: {x: 73.7, y: -128}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &820432969
@@ -998,7 +988,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -108, y: -3.4}
+  m_AnchoredPosition: {x: -102, y: -4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1055019864
@@ -1200,7 +1190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -108, y: 127}
+  m_AnchoredPosition: {x: -102, y: 123}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1147499949
@@ -1354,7 +1344,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75.2, y: -4.2}
+  m_AnchoredPosition: {x: 74.5, y: -4.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1279226325
@@ -1410,7 +1400,7 @@ GameObject:
   - component: {fileID: 1303061463}
   - component: {fileID: 1303061462}
   m_Layer: 0
-  m_Name: Island 4
+  m_Name: Island 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1523,7 +1513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74.8, y: 128}
+  m_AnchoredPosition: {x: 74, y: 123}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1358254770
@@ -1603,7 +1593,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 266, y: -175}
+  m_AnchoredPosition: {x: 258, y: -175}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1433510706
@@ -1915,7 +1905,7 @@ GameObject:
   - component: {fileID: 1530511985}
   - component: {fileID: 1530511984}
   m_Layer: 0
-  m_Name: Island 5
+  m_Name: Island 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2124,7 +2114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -265, y: -175}
+  m_AnchoredPosition: {x: -258, y: -175}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1823755937
@@ -2238,7 +2228,7 @@ GameObject:
   - component: {fileID: 1853920374}
   - component: {fileID: 1853920373}
   m_Layer: 0
-  m_Name: Island 2
+  m_Name: Island 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2330,7 +2320,7 @@ GameObject:
   - component: {fileID: 1920047373}
   - component: {fileID: 1920047372}
   m_Layer: 0
-  m_Name: Island 6
+  m_Name: Island 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

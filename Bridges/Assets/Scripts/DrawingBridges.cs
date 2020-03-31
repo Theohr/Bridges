@@ -24,7 +24,7 @@ public class DrawingBridges : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.DrawLine(new Vector3(0, 0), new Vector3(50, 50), Color.black, 100f);
+
     }
 
     // Update is called once per frame
