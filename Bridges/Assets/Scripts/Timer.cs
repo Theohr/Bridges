@@ -11,6 +11,8 @@ public class Timer : MonoBehaviour
     public float speed = 1;
     bool runningTimer = true;
 
+    public GameObject completedMode;
+
     // Use this for initialization
     void Start()
     {
@@ -24,21 +26,21 @@ public class Timer : MonoBehaviour
         // if the timer is running then we enter the if statement
         if (runningTimer)
         {
-            // timer increments 1 second per frame
-            timeStart += Time.deltaTime * speed;
-            // each minute are added every 59 seconds and goes up to 59 minutes
-            string minutes = Mathf.Floor((timeStart % 3600) / 59).ToString("00");
-            // each second gets increment up to 59 
-            string seconds = (timeStart % 59).ToString("00");
-            // text box displaying the timer in game
-            textBox.text = minutes + ":" + seconds;
+            if (completedMode.activeInHierarchy == false)
+            {
+                // timer increments 1 second per frame
+                timeStart += Time.deltaTime * speed;
+                // each minute are added every 59 seconds and goes up to 59 minutes
+                string minutes = Mathf.Floor((timeStart % 3600) / 59).ToString("00");
+                // each second gets increment up to 59 
+                string seconds = (timeStart % 59).ToString("00");
+                // text box displaying the timer in game
+                textBox.text = minutes + ":" + seconds;
+            }
         }
-    }
-
-    // Method that stops the timer if the User is done with the puzzle
-    public void StopTimer()
-    {
-        // setting the bool var to false so timer can stop running
-        runningTimer = false;
+        else
+        {
+            gameObject.GetComponent<Timer>().enabled = false;
+        }
     }
 }
