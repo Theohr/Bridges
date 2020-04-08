@@ -56,7 +56,7 @@ public class DrawingBridges2ndTry : MonoBehaviour
             //////
             // ISLAND 1 TO ISLAND 2 COORDINATES
             //////
-            if (mousePos.x < 185 && mousePos.x > 160)
+            if (mousePos.x < 155 && mousePos.x > 130)
             {
                 if (mousePos.y > 219 && mousePos.y < 312)
                 {
@@ -109,7 +109,7 @@ public class DrawingBridges2ndTry : MonoBehaviour
             //////
             // ISLAND 1 TO ISLAND 3 COORDINATES
             //////
-            if (mousePos.x > 192 && mousePos.x < 340)
+            if (mousePos.x > 160 && mousePos.x < 310)
             {
                 if (mousePos.y > 315 && mousePos.y < 340)
                 {
@@ -164,7 +164,7 @@ public class DrawingBridges2ndTry : MonoBehaviour
             //////
             // ISLAND 3 TO ISLAND 4 COORDINATES
             //////
-            if (mousePos.x > 340 && mousePos.x < 365)
+            if (mousePos.x > 310 && mousePos.x < 335)
             {
                 if (mousePos.y > 215 && mousePos.y < 315)
                 {
@@ -219,7 +219,7 @@ public class DrawingBridges2ndTry : MonoBehaviour
             //////
             // ISLAND 2 TO ISLAND 4 COORDINATES
             //////
-            if (mousePos.x > 192 && mousePos.x < 340)
+            if (mousePos.x > 160 && mousePos.x < 310)
             {
                 if (mousePos.y > 185 && mousePos.y < 210)
                 {
@@ -274,7 +274,7 @@ public class DrawingBridges2ndTry : MonoBehaviour
             //////
             // ISLAND 4 TO ISLAND 5 COORDINATES
             //////
-            if (mousePos.x > 340 && mousePos.x < 365)
+            if (mousePos.x > 310 && mousePos.x < 335)
             {
                 if (mousePos.y > 90 && mousePos.y < 182)
                 {
@@ -330,7 +330,7 @@ public class DrawingBridges2ndTry : MonoBehaviour
             //////
             // ISLAND 4 TO ISLAND 6 COORDINATES
             //////
-            if (mousePos.x > 375 && mousePos.x < 515)
+            if (mousePos.x > 345 && mousePos.x < 485)
             {
                 if (mousePos.y > 185 && mousePos.y < 210)
                 {
