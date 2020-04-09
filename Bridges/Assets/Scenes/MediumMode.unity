@@ -1117,6 +1117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 616522588}
   - component: {fileID: 616522587}
+  - component: {fileID: 616522589}
   - component: {fileID: 616522586}
   m_Layer: 0
   m_Name: Main Camera
@@ -1189,6 +1190,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &616522589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616522585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a491f75954cfefa4d846d861354abd99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  islandOne: {fileID: 2005906572}
+  islandTwo: {fileID: 1092920835}
+  islandThree: {fileID: 210946948}
+  islandFour: {fileID: 1748053028}
+  islandFive: {fileID: 245290468}
+  islandSix: {fileID: 718233497}
+  islandSeven: {fileID: 524592290}
+  islandEight: {fileID: 127955714}
+  islandNine: {fileID: 1921855546}
+  islandTen: {fileID: 1381816591}
+  islandEleven: {fileID: 196213442}
+  islandTwelve: {fileID: 1920216189}
+  material: {fileID: 0}
+  completedMode: {fileID: 1518801766}
 --- !u!1 &701398124
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,7 +2011,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50.7, y: -207.1}
+  m_AnchoredPosition: {x: 31.175, y: -228}
   m_SizeDelta: {x: 233.65, y: 46.46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1518801768
@@ -2007,12 +2034,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
