@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\CloseGame.cs" />
      <Compile Include="Assets\Scripts\DrawingBridges2ndTry.cs" />
      <Compile Include="Assets\Scripts\OpenEasyMode.cs" />
+     <Compile Include="Assets\Scripts\RestartHard.cs" />
      <Compile Include="Assets\Scripts\RestartMedium.cs" />
      <Compile Include="Assets\Scripts\RestartPuzzle.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
