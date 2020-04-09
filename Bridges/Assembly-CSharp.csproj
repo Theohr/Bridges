@@ -53,11 +53,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ChangeToEasy.cs" />
      <Compile Include="Assets\Scripts\BridgesMediumMode.cs" />
      <Compile Include="Assets\Scripts\ChangeToHard.cs" />
      <Compile Include="Assets\Scripts\ChangeToMain.cs" />
      <Compile Include="Assets\Scripts\ChangeToMedium.cs" />
+     <Compile Include="Assets\Scripts\ChangeToRules.cs" />
      <Compile Include="Assets\Scripts\CloseGame.cs" />
      <Compile Include="Assets\Scripts\DrawingBridges2ndTry.cs" />
      <Compile Include="Assets\Scripts\OpenEasyMode.cs" />

@@ -66,7 +66,7 @@ public class BridgesMediumMode : MonoBehaviour
     private int bridges3To9Counter = 0;
     private int bridges6To5Counter = 0;
     private int bridges7To8Counter = 0;
-    private int bridges6To10Counter = 0;
+    private int bridges8To10Counter = 0;
     private int bridges5To11Counter = 0;
     private int bridges10To9Counter = 0;
     private int bridges7To12Counter = 0;
@@ -78,6 +78,11 @@ public class BridgesMediumMode : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 mousePos = Input.mousePosition;
+
+            Debug.Log("Left mouse button pressed");
+
+            Debug.Log(mousePos.x);
+            Debug.Log(mousePos.y);
 
             //////
             // ISLAND 1 TO 4 BRIDGES
@@ -464,49 +469,49 @@ public class BridgesMediumMode : MonoBehaviour
             }
 
             //////
-            // ISLAND 6 TO 10
+            // ISLAND 8 TO 10
             //////
-            if (mousePos.x > 265 && mousePos.x < 430)
+            if (mousePos.x > 330 && mousePos.x < 430)
             {
-                if (mousePos.y > 230 && mousePos.y < 255)
+                if (mousePos.y > 170 && mousePos.y < 195)
                 {
-                    if (bridges6To10Counter == 0)
+                    if (bridges8To10Counter == 0)
                     {
                         createLine17();
 
                         // Update position of the two vertex of the Line Renderer
-                        line17.SetPosition(0, islandSix.transform.position);
+                        line17.SetPosition(0, islandEight.transform.position);
                         line17.SetPosition(1, islandTen.transform.position);
 
-                        bridges6To10Counter++;
+                        bridges8To10Counter++;
 
-                        Debug.Log(bridges6To10Counter);
+                        Debug.Log(bridges8To10Counter);
                     }
-                    else if (bridges6To10Counter == 1)
+                    else if (bridges8To10Counter == 1)
                     {
                         Destroy(line17);
 
                         createLine17();
 
                         // Update position of the two vertex of the Line Renderer
-                        line17.SetPosition(0, islandSix.transform.position - bridgePositionsY);
+                        line17.SetPosition(0, islandEight.transform.position - bridgePositionsY);
                         line17.SetPosition(1, islandTen.transform.position - bridgePositionsY);
 
                         createLine18();
 
                         // Update position of the two vertex of the Line Renderer
-                        line18.SetPosition(0, islandSix.transform.position + bridgePositionsY);
+                        line18.SetPosition(0, islandEight.transform.position + bridgePositionsY);
                         line18.SetPosition(1, islandTen.transform.position + bridgePositionsY);
 
-                        bridges6To10Counter++;
+                        bridges8To10Counter++;
 
-                        Debug.Log(bridges6To10Counter);
+                        Debug.Log(bridges8To10Counter);
                     }
                     else
                     {
                         Destroy(line17);
                         Destroy(line18);
-                        bridges6To10Counter = bridges6To10Counter - 2;
+                        bridges8To10Counter = bridges8To10Counter - 2;
                     }
                 }
             }
@@ -1047,7 +1052,7 @@ public class BridgesMediumMode : MonoBehaviour
     {
         if (bridges1To4Counter == 2 && bridges2To3Counter == 2 && bridges1To7Counter == 1 && bridges2To6Counter == 0
             && bridges4To5Counter == 1 && bridges3To9Counter == 2 && bridges6To5Counter == 1 && bridges7To8Counter == 2 
-            && bridges6To10Counter == 0 && bridges5To11Counter == 0 && bridges10To9Counter == 2 && bridges7To12Counter == 2
+            && bridges8To10Counter == 1 && bridges5To11Counter == 0 && bridges10To9Counter == 2 && bridges7To12Counter == 2
             && bridges12To11Counter == 1)
         {
             complete = true;
