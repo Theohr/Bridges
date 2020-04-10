@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BridgesHardMode.cs" />
      <Compile Include="Assets\Scripts\BridgesMediumMode.cs" />
      <Compile Include="Assets\Scripts\ChangeToHard.cs" />
      <Compile Include="Assets\Scripts\ChangeToMain.cs" />
