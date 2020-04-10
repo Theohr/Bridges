@@ -231,52 +231,54 @@ public class BridgesHardMode : MonoBehaviour
             //////
             // ISLAND 4 TO 5 BRIDGES
             //////
-            if (mousePos.x < 95 && mousePos.x > 75)
+            if (line11 == null)
             {
-                if (mousePos.y > 155 && mousePos.y < 240)
+                if (mousePos.x < 95 && mousePos.x > 75)
                 {
-                    if (bridges4To5Counter == 0)
+                    if (mousePos.y > 155 && mousePos.y < 240)
                     {
-                        createLine5();
+                        if (bridges4To5Counter == 0)
+                        {
+                            createLine5();
 
-                        // Update position of the two vertex of the Line Renderer
-                        line5.SetPosition(0, islandFour.transform.position);
-                        line5.SetPosition(1, islandFive.transform.position);
+                            // Update position of the two vertex of the Line Renderer
+                            line5.SetPosition(0, islandFour.transform.position);
+                            line5.SetPosition(1, islandFive.transform.position);
 
-                        bridges4To5Counter++;
+                            bridges4To5Counter++;
 
-                        Debug.Log(bridges4To5Counter);
+                            Debug.Log(bridges4To5Counter);
+                        }
+                        else if (bridges4To5Counter == 1)
+                        {
+                            Destroy(line5);
+
+                            createLine5();
+
+                            // Update position of the two vertex of the Line Renderer
+                            line5.SetPosition(0, islandFour.transform.position - bridgePositionsX);
+                            line5.SetPosition(1, islandFive.transform.position - bridgePositionsX);
+
+                            createLine6();
+
+                            // Update position of the two vertex of the Line Renderer
+                            line6.SetPosition(0, islandFour.transform.position + bridgePositionsX);
+                            line6.SetPosition(1, islandFive.transform.position + bridgePositionsX);
+
+                            bridges4To5Counter++;
+
+                            Debug.Log(bridges4To5Counter);
+                        }
+                        else
+                        {
+                            Destroy(line5);
+                            Destroy(line6);
+                            bridges4To5Counter = bridges4To5Counter - 2;
+                        }
+
                     }
-                    else if (bridges4To5Counter == 1)
-                    {
-                        Destroy(line5);
-
-                        createLine5();
-
-                        // Update position of the two vertex of the Line Renderer
-                        line5.SetPosition(0, islandFour.transform.position - bridgePositionsX);
-                        line5.SetPosition(1, islandFive.transform.position - bridgePositionsX);
-
-                        createLine6();
-
-                        // Update position of the two vertex of the Line Renderer
-                        line6.SetPosition(0, islandFour.transform.position + bridgePositionsX);
-                        line6.SetPosition(1, islandFive.transform.position + bridgePositionsX);
-
-                        bridges4To5Counter++;
-
-                        Debug.Log(bridges4To5Counter);
-                    }
-                    else
-                    {
-                        Destroy(line5);
-                        Destroy(line6);
-                        bridges4To5Counter = bridges4To5Counter - 2;
-                    }
-
                 }
             }
-
             //////
             // ISLAND 1 TO 9 BRIDGES
             //////
@@ -378,52 +380,54 @@ public class BridgesHardMode : MonoBehaviour
             //////
             // ISLAND 2 TO 10 BRIDGES
             //////
-            if (mousePos.x < 270 && mousePos.x > 65)
+            if (line5 == null && line17 == null)
             {
-                if (mousePos.y > 190 && mousePos.y < 210)
+                if (mousePos.x < 270 && mousePos.x > 65)
                 {
-                    if (bridges2To10Counter == 0)
+                    if (mousePos.y > 190 && mousePos.y < 210)
                     {
-                        createLine11();
+                        if (bridges2To10Counter == 0)
+                        {
+                            createLine11();
 
-                        // Update position of the two vertex of the Line Renderer
-                        line11.SetPosition(0, islandTwo.transform.position);
-                        line11.SetPosition(1, islandTen.transform.position);
+                            // Update position of the two vertex of the Line Renderer
+                            line11.SetPosition(0, islandTwo.transform.position);
+                            line11.SetPosition(1, islandTen.transform.position);
 
-                        bridges2To10Counter++;
+                            bridges2To10Counter++;
 
-                        Debug.Log(bridges2To10Counter);
+                            Debug.Log(bridges2To10Counter);
+                        }
+                        else if (bridges2To10Counter == 1)
+                        {
+                            Destroy(line11);
+
+                            createLine11();
+
+                            // Update position of the two vertex of the Line Renderer
+                            line11.SetPosition(0, islandTwo.transform.position - bridgePositionsY);
+                            line11.SetPosition(1, islandTen.transform.position - bridgePositionsY);
+
+                            createLine12();
+
+                            // Update position of the two vertex of the Line Renderer
+                            line12.SetPosition(0, islandTwo.transform.position + bridgePositionsY);
+                            line12.SetPosition(1, islandTen.transform.position + bridgePositionsY);
+
+                            bridges2To10Counter++;
+
+                            Debug.Log(bridges2To10Counter);
+                        }
+                        else
+                        {
+                            Destroy(line11);
+                            Destroy(line12);
+                            bridges2To10Counter = bridges2To10Counter - 2;
+                        }
+
                     }
-                    else if (bridges2To10Counter == 1)
-                    {
-                        Destroy(line11);
-
-                        createLine11();
-
-                        // Update position of the two vertex of the Line Renderer
-                        line11.SetPosition(0, islandTwo.transform.position - bridgePositionsY);
-                        line11.SetPosition(1, islandTen.transform.position - bridgePositionsY);
-
-                        createLine12();
-
-                        // Update position of the two vertex of the Line Renderer
-                        line12.SetPosition(0, islandTwo.transform.position + bridgePositionsY);
-                        line12.SetPosition(1, islandTen.transform.position + bridgePositionsY);
-
-                        bridges2To10Counter++;
-
-                        Debug.Log(bridges2To10Counter);
-                    }
-                    else
-                    {
-                        Destroy(line11);
-                        Destroy(line12);
-                        bridges2To10Counter = bridges2To10Counter - 2;
-                    }
-
                 }
             }
-
             //////
             // ISLAND 5 TO 7 BRIDGES
             //////
@@ -525,49 +529,52 @@ public class BridgesHardMode : MonoBehaviour
             //////
             // ISLAND 8 TO 7 BRIDGES
             //////
-            if (mousePos.x < 235 && mousePos.x > 215)
+            if (line11 == null)
             {
-                if (mousePos.y > 155 && mousePos.y < 240)
+                if (mousePos.x < 235 && mousePos.x > 215)
                 {
-                    if (bridges8To7Counter == 0)
+                    if (mousePos.y > 155 && mousePos.y < 240)
                     {
-                        createLine17();
+                        if (bridges8To7Counter == 0)
+                        {
+                            createLine17();
 
-                        // Update position of the two vertex of the Line Renderer
-                        line17.SetPosition(0, islandEight.transform.position);
-                        line17.SetPosition(1, islandSeven.transform.position);
+                            // Update position of the two vertex of the Line Renderer
+                            line17.SetPosition(0, islandEight.transform.position);
+                            line17.SetPosition(1, islandSeven.transform.position);
 
-                        bridges8To7Counter++;
+                            bridges8To7Counter++;
 
-                        Debug.Log(bridges8To7Counter);
+                            Debug.Log(bridges8To7Counter);
+                        }
+                        else if (bridges8To7Counter == 1)
+                        {
+                            Destroy(line17);
+
+                            createLine17();
+
+                            // Update position of the two vertex of the Line Renderer
+                            line17.SetPosition(0, islandEight.transform.position - bridgePositionsX);
+                            line17.SetPosition(1, islandSeven.transform.position - bridgePositionsX);
+
+                            createLine18();
+
+                            // Update position of the two vertex of the Line Renderer
+                            line18.SetPosition(0, islandEight.transform.position + bridgePositionsX);
+                            line18.SetPosition(1, islandSeven.transform.position + bridgePositionsX);
+
+                            bridges8To7Counter++;
+
+                            Debug.Log(bridges8To7Counter);
+                        }
+                        else
+                        {
+                            Destroy(line17);
+                            Destroy(line18);
+                            bridges8To7Counter = bridges8To7Counter - 2;
+                        }
+
                     }
-                    else if (bridges8To7Counter == 1)
-                    {
-                        Destroy(line17);
-
-                        createLine17();
-
-                        // Update position of the two vertex of the Line Renderer
-                        line17.SetPosition(0, islandEight.transform.position - bridgePositionsX);
-                        line17.SetPosition(1, islandSeven.transform.position - bridgePositionsX);
-
-                        createLine18();
-
-                        // Update position of the two vertex of the Line Renderer
-                        line18.SetPosition(0, islandEight.transform.position + bridgePositionsX);
-                        line18.SetPosition(1, islandSeven.transform.position + bridgePositionsX);
-
-                        bridges8To7Counter++;
-
-                        Debug.Log(bridges8To7Counter);
-                    }
-                    else
-                    {
-                        Destroy(line17);
-                        Destroy(line18);
-                        bridges8To7Counter = bridges8To7Counter - 2;
-                    }
-
                 }
             }
 
@@ -672,96 +679,101 @@ public class BridgesHardMode : MonoBehaviour
             //////
             // ISLAND 9 TO 10 BRIDGES
             //////
-            if (mousePos.x < 295 && mousePos.x > 275)
+            if (line27 == null)
             {
-                if (mousePos.y > 210 && mousePos.y < 310)
+                if (mousePos.x < 295 && mousePos.x > 275)
                 {
-                    if (bridges9To10Counter == 0)
+                    if (mousePos.y > 210 && mousePos.y < 310)
                     {
-                        createLine23();
+                        if (bridges9To10Counter == 0)
+                        {
+                            createLine23();
 
-                        // Update position of the two vertex of the Line Renderer
-                        line23.SetPosition(0, islandNine.transform.position);
-                        line23.SetPosition(1, islandTen.transform.position);
+                            // Update position of the two vertex of the Line Renderer
+                            line23.SetPosition(0, islandNine.transform.position);
+                            line23.SetPosition(1, islandTen.transform.position);
 
-                        bridges9To10Counter++;
+                            bridges9To10Counter++;
 
-                        Debug.Log(bridges9To10Counter);
+                            Debug.Log(bridges9To10Counter);
+                        }
+                        else if (bridges9To10Counter == 1)
+                        {
+                            Destroy(line23);
+
+                            createLine23();
+
+                            // Update position of the two vertex of the Line Renderer
+                            line23.SetPosition(0, islandNine.transform.position - bridgePositionsX);
+                            line23.SetPosition(1, islandTen.transform.position - bridgePositionsX);
+
+                            createLine24();
+
+                            // Update position of the two vertex of the Line Renderer
+                            line24.SetPosition(0, islandNine.transform.position + bridgePositionsX);
+                            line24.SetPosition(1, islandTen.transform.position + bridgePositionsX);
+
+                            bridges9To10Counter++;
+
+                            Debug.Log(bridges9To10Counter);
+                        }
+                        else
+                        {
+                            Destroy(line23);
+                            Destroy(line24);
+                            bridges9To10Counter = bridges9To10Counter - 2;
+                        }
+
                     }
-                    else if (bridges9To10Counter == 1)
-                    {
-                        Destroy(line23);
-
-                        createLine23();
-
-                        // Update position of the two vertex of the Line Renderer
-                        line23.SetPosition(0, islandNine.transform.position - bridgePositionsX);
-                        line23.SetPosition(1, islandTen.transform.position - bridgePositionsX);
-
-                        createLine24();
-
-                        // Update position of the two vertex of the Line Renderer
-                        line24.SetPosition(0, islandNine.transform.position + bridgePositionsX);
-                        line24.SetPosition(1, islandTen.transform.position + bridgePositionsX);
-
-                        bridges9To10Counter++;
-
-                        Debug.Log(bridges9To10Counter);
-                    }
-                    else
-                    {
-                        Destroy(line23);
-                        Destroy(line24);
-                        bridges9To10Counter = bridges9To10Counter - 2;
-                    }
-
                 }
             }
-
             //////
             // ISLAND 10 TO 6 BRIDGES
             //////
-            if (mousePos.x < 295 && mousePos.x > 275)
+            if (line35 == null)
             {
-                if (mousePos.y > 80 && mousePos.y < 180)
+                if (mousePos.x < 295 && mousePos.x > 275)
                 {
-                    if (bridges10To6Counter == 0)
+                    if (mousePos.y > 80 && mousePos.y < 180)
                     {
-                        createLine25();
+                        if (bridges10To6Counter == 0)
+                        {
+                            createLine25();
 
-                        // Update position of the two vertex of the Line Renderer
-                        line25.SetPosition(0, islandTen.transform.position);
-                        line25.SetPosition(1, islandSix.transform.position);
+                            // Update position of the two vertex of the Line Renderer
+                            line25.SetPosition(0, islandTen.transform.position);
+                            line25.SetPosition(1, islandSix.transform.position);
 
-                        bridges10To6Counter++;
+                            bridges10To6Counter++;
 
-                        Debug.Log(bridges10To6Counter);
-                    }
-                    else if (bridges10To6Counter == 1)
-                    {
-                        Destroy(line25);
+                            Debug.Log(bridges10To6Counter);
+                        }
+                        else if (bridges10To6Counter == 1)
+                        {
+                            Destroy(line25);
 
-                        createLine25();
+                            createLine25();
 
-                        // Update position of the two vertex of the Line Renderer
-                        line25.SetPosition(0, islandTen.transform.position - bridgePositionsX);
-                        line25.SetPosition(1, islandSix.transform.position - bridgePositionsX);
+                            // Update position of the two vertex of the Line Renderer
+                            line25.SetPosition(0, islandTen.transform.position - bridgePositionsX);
+                            line25.SetPosition(1, islandSix.transform.position - bridgePositionsX);
 
-                        createLine26();
+                            createLine26();
 
-                        // Update position of the two vertex of the Line Renderer
-                        line26.SetPosition(0, islandTen.transform.position + bridgePositionsX);
-                        line26.SetPosition(1, islandSix.transform.position + bridgePositionsX);
+                            // Update position of the two vertex of the Line Renderer
+                            line26.SetPosition(0, islandTen.transform.position + bridgePositionsX);
+                            line26.SetPosition(1, islandSix.transform.position + bridgePositionsX);
 
-                        bridges10To6Counter++;
+                            bridges10To6Counter++;
 
-                        Debug.Log(bridges10To6Counter);
-                    }
-                    else
-                    {
-                        Destroy(line25);
-                        Destroy(line26);
-                        bridges10To6Counter = bridges10To6Counter - 2;
+                            Debug.Log(bridges10To6Counter);
+                        }
+                        else
+                        {
+                            Destroy(line25);
+                            Destroy(line26);
+                            bridges10To6Counter = bridges10To6Counter - 2;
+                        }
                     }
                 }
             }
@@ -769,49 +781,52 @@ public class BridgesHardMode : MonoBehaviour
             //////
             // ISLAND 8 TO 12 BRIDGES
             //////
-            if (mousePos.x < 370 && mousePos.x > 245)
+            if (line23 == null)
             {
-                if (mousePos.y > 245 && mousePos.y < 265)
+                if (mousePos.x < 370 && mousePos.x > 245)
                 {
-                    if (bridges8To12Counter == 0)
+                    if (mousePos.y > 245 && mousePos.y < 265)
                     {
-                        createLine27();
+                        if (bridges8To12Counter == 0)
+                        {
+                            createLine27();
 
-                        // Update position of the two vertex of the Line Renderer
-                        line27.SetPosition(0, islandEight.transform.position);
-                        line27.SetPosition(1, islandTwelve.transform.position);
+                            // Update position of the two vertex of the Line Renderer
+                            line27.SetPosition(0, islandEight.transform.position);
+                            line27.SetPosition(1, islandTwelve.transform.position);
 
-                        bridges8To12Counter++;
+                            bridges8To12Counter++;
 
-                        Debug.Log(bridges8To12Counter);
+                            Debug.Log(bridges8To12Counter);
+                        }
+                        else if (bridges8To12Counter == 1)
+                        {
+                            Destroy(line27);
+
+                            createLine27();
+
+                            // Update position of the two vertex of the Line Renderer
+                            line27.SetPosition(0, islandEight.transform.position - bridgePositionsY);
+                            line27.SetPosition(1, islandTwelve.transform.position - bridgePositionsY);
+
+                            createLine28();
+
+                            // Update position of the two vertex of the Line Renderer
+                            line28.SetPosition(0, islandEight.transform.position + bridgePositionsY);
+                            line28.SetPosition(1, islandTwelve.transform.position + bridgePositionsY);
+
+                            bridges8To12Counter++;
+
+                            Debug.Log(bridges8To12Counter);
+                        }
+                        else
+                        {
+                            Destroy(line27);
+                            Destroy(line28);
+                            bridges8To12Counter = bridges8To12Counter - 2;
+                        }
+
                     }
-                    else if (bridges8To12Counter == 1)
-                    {
-                        Destroy(line27);
-
-                        createLine27();
-
-                        // Update position of the two vertex of the Line Renderer
-                        line27.SetPosition(0, islandEight.transform.position - bridgePositionsY);
-                        line27.SetPosition(1, islandTwelve.transform.position - bridgePositionsY);
-
-                        createLine28();
-
-                        // Update position of the two vertex of the Line Renderer
-                        line28.SetPosition(0, islandEight.transform.position + bridgePositionsY);
-                        line28.SetPosition(1, islandTwelve.transform.position + bridgePositionsY);
-
-                        bridges8To12Counter++;
-
-                        Debug.Log(bridges8To12Counter);
-                    }
-                    else
-                    {
-                        Destroy(line27);
-                        Destroy(line28);
-                        bridges8To12Counter = bridges8To12Counter - 2;
-                    }
-
                 }
             }
 
@@ -965,146 +980,153 @@ public class BridgesHardMode : MonoBehaviour
             //////
             // ISLAND 7 TO 18 BRIDGES
             //////
-            if (mousePos.x < 585 && mousePos.x > 245)
+            if (line25 == null && line37 == null)
             {
-                if (mousePos.y > 130 && mousePos.y < 150)
+                if (mousePos.x < 585 && mousePos.x > 245)
                 {
-                    if (bridges7To18Counter == 0)
+                    if (mousePos.y > 130 && mousePos.y < 150)
                     {
-                        createLine35();
+                        if (bridges7To18Counter == 0)
+                        {
+                            createLine35();
 
-                        // Update position of the two vertex of the Line Renderer
-                        line35.SetPosition(0, islandSeven.transform.position);
-                        line35.SetPosition(1, islandEighteen.transform.position);
+                            // Update position of the two vertex of the Line Renderer
+                            line35.SetPosition(0, islandSeven.transform.position);
+                            line35.SetPosition(1, islandEighteen.transform.position);
 
-                        bridges7To18Counter++;
+                            bridges7To18Counter++;
 
-                        Debug.Log(bridges7To18Counter);
-                    }
-                    else if (bridges7To18Counter == 1)
-                    {
-                        Destroy(line35);
+                            Debug.Log(bridges7To18Counter);
+                        }
+                        else if (bridges7To18Counter == 1)
+                        {
+                            Destroy(line35);
 
-                        createLine35();
+                            createLine35();
 
-                        // Update position of the two vertex of the Line Renderer
-                        line35.SetPosition(0, islandSeven.transform.position - bridgePositionsY);
-                        line35.SetPosition(1, islandEighteen.transform.position - bridgePositionsY);
+                            // Update position of the two vertex of the Line Renderer
+                            line35.SetPosition(0, islandSeven.transform.position - bridgePositionsY);
+                            line35.SetPosition(1, islandEighteen.transform.position - bridgePositionsY);
 
-                        createLine36();
+                            createLine36();
 
-                        // Update position of the two vertex of the Line Renderer
-                        line36.SetPosition(0, islandSeven.transform.position + bridgePositionsY);
-                        line36.SetPosition(1, islandEighteen.transform.position + bridgePositionsY);
+                            // Update position of the two vertex of the Line Renderer
+                            line36.SetPosition(0, islandSeven.transform.position + bridgePositionsY);
+                            line36.SetPosition(1, islandEighteen.transform.position + bridgePositionsY);
 
-                        bridges7To18Counter++;
+                            bridges7To18Counter++;
 
-                        Debug.Log(bridges7To18Counter);
-                    }
-                    else
-                    {
-                        Destroy(line35);
-                        Destroy(line36);
-                        bridges7To18Counter = bridges7To18Counter - 2;
+                            Debug.Log(bridges7To18Counter);
+                        }
+                        else
+                        {
+                            Destroy(line35);
+                            Destroy(line36);
+                            bridges7To18Counter = bridges7To18Counter - 2;
+                        }
                     }
                 }
             }
-
             //////
             // ISLAND 12 TO 11 BRIDGES
             //////
-            if (mousePos.x < 395 && mousePos.x > 375)
+            if (line35 == null)
             {
-                if (mousePos.y > 85 && mousePos.y < 240)
+                if (mousePos.x < 395 && mousePos.x > 375)
                 {
-                    if (bridges12To11Counter == 0)
+                    if (mousePos.y > 85 && mousePos.y < 240)
                     {
-                        createLine37();
+                        if (bridges12To11Counter == 0)
+                        {
+                            createLine37();
 
-                        // Update position of the two vertex of the Line Renderer
-                        line37.SetPosition(0, islandTwelve.transform.position);
-                        line37.SetPosition(1, islandEleven.transform.position);
+                            // Update position of the two vertex of the Line Renderer
+                            line37.SetPosition(0, islandTwelve.transform.position);
+                            line37.SetPosition(1, islandEleven.transform.position);
 
-                        bridges12To11Counter++;
+                            bridges12To11Counter++;
 
-                        Debug.Log(bridges12To11Counter);
+                            Debug.Log(bridges12To11Counter);
+                        }
+                        else if (bridges12To11Counter == 1)
+                        {
+                            Destroy(line37);
+
+                            createLine37();
+
+                            // Update position of the two vertex of the Line Renderer
+                            line37.SetPosition(0, islandTwelve.transform.position - bridgePositionsX);
+                            line37.SetPosition(1, islandEleven.transform.position - bridgePositionsX);
+
+                            createLine38();
+
+                            // Update position of the two vertex of the Line Renderer
+                            line38.SetPosition(0, islandTwelve.transform.position + bridgePositionsX);
+                            line38.SetPosition(1, islandEleven.transform.position + bridgePositionsX);
+
+                            bridges12To11Counter++;
+
+                            Debug.Log(bridges12To11Counter);
+                        }
+                        else
+                        {
+                            Destroy(line37);
+                            Destroy(line38);
+                            bridges12To11Counter = bridges12To11Counter - 2;
+                        }
+
                     }
-                    else if (bridges12To11Counter == 1)
-                    {
-                        Destroy(line37);
-
-                        createLine37();
-
-                        // Update position of the two vertex of the Line Renderer
-                        line37.SetPosition(0, islandTwelve.transform.position - bridgePositionsX);
-                        line37.SetPosition(1, islandEleven.transform.position - bridgePositionsX);
-
-                        createLine38();
-
-                        // Update position of the two vertex of the Line Renderer
-                        line38.SetPosition(0, islandTwelve.transform.position + bridgePositionsX);
-                        line38.SetPosition(1, islandEleven.transform.position + bridgePositionsX);
-
-                        bridges12To11Counter++;
-
-                        Debug.Log(bridges12To11Counter);
-                    }
-                    else
-                    {
-                        Destroy(line37);
-                        Destroy(line38);
-                        bridges12To11Counter = bridges12To11Counter - 2;
-                    }
-
                 }
             }
-
             //////
             // ISLAND 13 TO 14 BRIDGES
             //////
-            if (mousePos.x < 455 && mousePos.x > 435)
+            if (line43 == null)
             {
-                if (mousePos.y > 210 && mousePos.y < 310)
+                if (mousePos.x < 455 && mousePos.x > 435)
                 {
-                    if (bridges13To14Counter == 0)
+                    if (mousePos.y > 210 && mousePos.y < 310)
                     {
-                        createLine39();
+                        if (bridges13To14Counter == 0)
+                        {
+                            createLine39();
 
-                        // Update position of the two vertex of the Line Renderer
-                        line39.SetPosition(0, islandThirteen.transform.position);
-                        line39.SetPosition(1, islandFourteen.transform.position);
+                            // Update position of the two vertex of the Line Renderer
+                            line39.SetPosition(0, islandThirteen.transform.position);
+                            line39.SetPosition(1, islandFourteen.transform.position);
 
-                        bridges13To14Counter++;
+                            bridges13To14Counter++;
 
-                        Debug.Log(bridges13To14Counter);
+                            Debug.Log(bridges13To14Counter);
+                        }
+                        else if (bridges13To14Counter == 1)
+                        {
+                            Destroy(line39);
+
+                            createLine39();
+
+                            // Update position of the two vertex of the Line Renderer
+                            line39.SetPosition(0, islandThirteen.transform.position - bridgePositionsX);
+                            line39.SetPosition(1, islandFourteen.transform.position - bridgePositionsX);
+
+                            createLine40();
+
+                            // Update position of the two vertex of the Line Renderer
+                            line40.SetPosition(0, islandThirteen.transform.position + bridgePositionsX);
+                            line40.SetPosition(1, islandFourteen.transform.position + bridgePositionsX);
+
+                            bridges13To14Counter++;
+
+                            Debug.Log(bridges13To14Counter);
+                        }
+                        else
+                        {
+                            Destroy(line39);
+                            Destroy(line40);
+                            bridges13To14Counter = bridges13To14Counter - 2;
+                        }
+
                     }
-                    else if (bridges13To14Counter == 1)
-                    {
-                        Destroy(line39);
-
-                        createLine39();
-
-                        // Update position of the two vertex of the Line Renderer
-                        line39.SetPosition(0, islandThirteen.transform.position - bridgePositionsX);
-                        line39.SetPosition(1, islandFourteen.transform.position - bridgePositionsX);
-
-                        createLine40();
-
-                        // Update position of the two vertex of the Line Renderer
-                        line40.SetPosition(0, islandThirteen.transform.position + bridgePositionsX);
-                        line40.SetPosition(1, islandFourteen.transform.position + bridgePositionsX);
-
-                        bridges13To14Counter++;
-
-                        Debug.Log(bridges13To14Counter);
-                    }
-                    else
-                    {
-                        Destroy(line39);
-                        Destroy(line40);
-                        bridges13To14Counter = bridges13To14Counter - 2;
-                    }
-
                 }
             }
 
@@ -1160,49 +1182,52 @@ public class BridgesHardMode : MonoBehaviour
             //////
             // ISLAND 12 TO 17 BRIDGES
             //////
-            if (mousePos.x < 585 && mousePos.x > 405)
+            if (line39 == null && line53 == null)
             {
-                if (mousePos.y > 245 && mousePos.y < 265)
+                if (mousePos.x < 585 && mousePos.x > 405)
                 {
-                    if (bridges12To17Counter == 0)
+                    if (mousePos.y > 245 && mousePos.y < 265)
                     {
-                        createLine43();
+                        if (bridges12To17Counter == 0)
+                        {
+                            createLine43();
 
-                        // Update position of the two vertex of the Line Renderer
-                        line43.SetPosition(0, islandTwelve.transform.position);
-                        line43.SetPosition(1, islandSeventeen.transform.position);
+                            // Update position of the two vertex of the Line Renderer
+                            line43.SetPosition(0, islandTwelve.transform.position);
+                            line43.SetPosition(1, islandSeventeen.transform.position);
 
-                        bridges12To17Counter++;
+                            bridges12To17Counter++;
 
-                        Debug.Log(bridges12To17Counter);
+                            Debug.Log(bridges12To17Counter);
+                        }
+                        else if (bridges12To17Counter == 1)
+                        {
+                            Destroy(line43);
+
+                            createLine43();
+
+                            // Update position of the two vertex of the Line Renderer
+                            line43.SetPosition(0, islandTwelve.transform.position - bridgePositionsY);
+                            line43.SetPosition(1, islandSeventeen.transform.position - bridgePositionsY);
+
+                            createLine44();
+
+                            // Update position of the two vertex of the Line Renderer
+                            line44.SetPosition(0, islandTwelve.transform.position + bridgePositionsY);
+                            line44.SetPosition(1, islandSeventeen.transform.position + bridgePositionsY);
+
+                            bridges12To17Counter++;
+
+                            Debug.Log(bridges12To17Counter);
+                        }
+                        else
+                        {
+                            Destroy(line43);
+                            Destroy(line44);
+                            bridges12To17Counter = bridges12To17Counter - 2;
+                        }
+
                     }
-                    else if (bridges12To17Counter == 1)
-                    {
-                        Destroy(line43);
-
-                        createLine43();
-
-                        // Update position of the two vertex of the Line Renderer
-                        line43.SetPosition(0, islandTwelve.transform.position - bridgePositionsY);
-                        line43.SetPosition(1, islandSeventeen.transform.position - bridgePositionsY);
-
-                        createLine44();
-
-                        // Update position of the two vertex of the Line Renderer
-                        line44.SetPosition(0, islandTwelve.transform.position + bridgePositionsY);
-                        line44.SetPosition(1, islandSeventeen.transform.position + bridgePositionsY);
-
-                        bridges12To17Counter++;
-
-                        Debug.Log(bridges12To17Counter);
-                    }
-                    else
-                    {
-                        Destroy(line43);
-                        Destroy(line44);
-                        bridges12To17Counter = bridges12To17Counter - 2;
-                    }
-
                 }
             }
 
@@ -1405,52 +1430,54 @@ public class BridgesHardMode : MonoBehaviour
             //////
             // ISLAND 15 TO 20 BRIDGES
             //////
-            if (mousePos.x < 555 && mousePos.x > 535)
+            if (line43 == null)
             {
-                if (mousePos.y > 215 && mousePos.y < 315)
+                if (mousePos.x < 555 && mousePos.x > 535)
                 {
-                    if (bridges15To20Counter == 0)
+                    if (mousePos.y > 215 && mousePos.y < 315)
                     {
-                        createLine53();
+                        if (bridges15To20Counter == 0)
+                        {
+                            createLine53();
 
-                        // Update position of the two vertex of the Line Renderer
-                        line53.SetPosition(0, islandFifteen.transform.position);
-                        line53.SetPosition(1, islandTwenty.transform.position);
+                            // Update position of the two vertex of the Line Renderer
+                            line53.SetPosition(0, islandFifteen.transform.position);
+                            line53.SetPosition(1, islandTwenty.transform.position);
 
-                        bridges15To20Counter++;
+                            bridges15To20Counter++;
 
-                        Debug.Log(bridges15To20Counter);
-                    }
-                    else if (bridges15To20Counter == 1)
-                    {
-                        Destroy(line53);
+                            Debug.Log(bridges15To20Counter);
+                        }
+                        else if (bridges15To20Counter == 1)
+                        {
+                            Destroy(line53);
 
-                        createLine53();
+                            createLine53();
 
-                        // Update position of the two vertex of the Line Renderer
-                        line53.SetPosition(0, islandFifteen.transform.position - bridgePositionsX);
-                        line53.SetPosition(1, islandTwenty.transform.position - bridgePositionsX);
+                            // Update position of the two vertex of the Line Renderer
+                            line53.SetPosition(0, islandFifteen.transform.position - bridgePositionsX);
+                            line53.SetPosition(1, islandTwenty.transform.position - bridgePositionsX);
 
-                        createLine54();
+                            createLine54();
 
-                        // Update position of the two vertex of the Line Renderer
-                        line54.SetPosition(0, islandFifteen.transform.position + bridgePositionsX);
-                        line54.SetPosition(1, islandTwenty.transform.position + bridgePositionsX);
+                            // Update position of the two vertex of the Line Renderer
+                            line54.SetPosition(0, islandFifteen.transform.position + bridgePositionsX);
+                            line54.SetPosition(1, islandTwenty.transform.position + bridgePositionsX);
 
-                        bridges15To20Counter++;
+                            bridges15To20Counter++;
 
-                        Debug.Log(bridges15To20Counter);
-                    }
-                    else
-                    {
-                        Destroy(line53);
-                        Destroy(line54);
-                        bridges15To20Counter = bridges15To20Counter - 2;
+                            Debug.Log(bridges15To20Counter);
+                        }
+                        else
+                        {
+                            Destroy(line53);
+                            Destroy(line54);
+                            bridges15To20Counter = bridges15To20Counter - 2;
+                        }
                     }
                 }
             }
         }
-
         Complete();
     }
 
