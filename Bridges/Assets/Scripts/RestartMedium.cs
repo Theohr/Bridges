@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class RestartMedium : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Restart the medium mode puzzle
     public void RestartMediumMode()
     {
         SceneManager.LoadScene("MediumMode");

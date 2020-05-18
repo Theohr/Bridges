@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class OpenEasyMode : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Takjes the user to the easy puzzle
     public void ChangeToEasyDiff()
     {
         SceneManager.LoadScene("EasyMode");

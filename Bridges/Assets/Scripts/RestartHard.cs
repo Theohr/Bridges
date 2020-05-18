@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class RestartHard : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Restart the hard mode puzzle
     public void RestartHardMode()
     {
         SceneManager.LoadScene("HardMode");

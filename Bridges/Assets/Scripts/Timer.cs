@@ -26,6 +26,7 @@ public class Timer : MonoBehaviour
         // if the timer is running then we enter the if statement
         if (runningTimer)
         {
+            // if the completed puzzle message appears then everything stops and puzzle is done
             if (completedMode.activeInHierarchy == false)
             {
                 // timer increments 1 second per frame

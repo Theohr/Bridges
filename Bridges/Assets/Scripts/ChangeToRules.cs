@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ChangeToRules : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Takes the user to the rules scene
     public void ChangeToRulesInstructions()
     {
         SceneManager.LoadScene("Instructions");

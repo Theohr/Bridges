@@ -882,52 +882,54 @@ public class BridgesHardMode : MonoBehaviour
             //////
             // ISLAND 10 TO 14 BRIDGES
             //////
-            if (mousePos.x < 425 && mousePos.x > 305)
+            if (line37 == null)
             {
-                if (mousePos.y > 190 && mousePos.y < 210)
+                if (mousePos.x < 425 && mousePos.x > 305)
                 {
-                    if (bridges10To14Counter == 0)
+                    if (mousePos.y > 190 && mousePos.y < 210)
                     {
-                        createLine31();
+                        if (bridges10To14Counter == 0)
+                        {
+                            createLine31();
 
-                        // Update position of the two vertex of the Line Renderer
-                        line31.SetPosition(0, islandTen.transform.position);
-                        line31.SetPosition(1, islandFourteen.transform.position);
+                            // Update position of the two vertex of the Line Renderer
+                            line31.SetPosition(0, islandTen.transform.position);
+                            line31.SetPosition(1, islandFourteen.transform.position);
 
-                        bridges10To14Counter++;
+                            bridges10To14Counter++;
 
-                        Debug.Log(bridges10To14Counter);
+                            Debug.Log(bridges10To14Counter);
+                        }
+                        else if (bridges10To14Counter == 1)
+                        {
+                            Destroy(line31);
+
+                            createLine31();
+
+                            // Update position of the two vertex of the Line Renderer
+                            line31.SetPosition(0, islandTen.transform.position - bridgePositionsY);
+                            line31.SetPosition(1, islandFourteen.transform.position - bridgePositionsY);
+
+                            createLine32();
+
+                            // Update position of the two vertex of the Line Renderer
+                            line32.SetPosition(0, islandTen.transform.position + bridgePositionsY);
+                            line32.SetPosition(1, islandFourteen.transform.position + bridgePositionsY);
+
+                            bridges10To14Counter++;
+
+                            Debug.Log(bridges10To14Counter);
+                        }
+                        else
+                        {
+                            Destroy(line31);
+                            Destroy(line32);
+                            bridges10To14Counter = bridges10To14Counter - 2;
+                        }
+
                     }
-                    else if (bridges10To14Counter == 1)
-                    {
-                        Destroy(line31);
-
-                        createLine31();
-
-                        // Update position of the two vertex of the Line Renderer
-                        line31.SetPosition(0, islandTen.transform.position - bridgePositionsY);
-                        line31.SetPosition(1, islandFourteen.transform.position - bridgePositionsY);
-
-                        createLine32();
-
-                        // Update position of the two vertex of the Line Renderer
-                        line32.SetPosition(0, islandTen.transform.position + bridgePositionsY);
-                        line32.SetPosition(1, islandFourteen.transform.position + bridgePositionsY);
-
-                        bridges10To14Counter++;
-
-                        Debug.Log(bridges10To14Counter);
-                    }
-                    else
-                    {
-                        Destroy(line31);
-                        Destroy(line32);
-                        bridges10To14Counter = bridges10To14Counter - 2;
-                    }
-
                 }
             }
-
             //////
             // ISLAND 9 TO 13 BRIDGES
             //////
@@ -1030,7 +1032,7 @@ public class BridgesHardMode : MonoBehaviour
             //////
             // ISLAND 12 TO 11 BRIDGES
             //////
-            if (line35 == null)
+            if (line35 == null && line31 == null)
             {
                 if (mousePos.x < 395 && mousePos.x > 375)
                 {

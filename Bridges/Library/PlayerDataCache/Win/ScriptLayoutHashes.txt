@@ -1,6 +1,6 @@
 Win
 PlayerPath?
-C:/Users/Theo/Desktop/New folder/Bridges.exe
+D:/Bridges/Bridges/Executable/x86/Bridges.exe
 SceneListBegin?
 Assets/Scenes/HomePage.unity
 Assets/Scenes/Instructions.unity
