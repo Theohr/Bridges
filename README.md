@@ -1,6 +1,6 @@
 # Bridges
 
-Trello Board: https://trello.com/b/VAubTItj/bridges
+This is a logic puzzle game implemented in Unity 2D using C#. The ultimate goal of the game is to connect Islands with Bridges in order to solve the puzzle. There is a variety of difficulties in the game. 
 
 ## How to Play
 
